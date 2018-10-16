@@ -1,0 +1,30 @@
+<view class="content">
+  <button bindtap='loginRequest'>登陆</button>
+</view>
+
+<view>
+  <button open-type="getPhoneNumber" bindgetphonenumber='getPhoneNumber'>获取手机号</button>
+</view>
+
+<view>
+  <button open-type='getUserInfo' bindgetuserinfo='getUserInfo'>授权</button>
+</view>
+
+<view>
+  <button bindtap='getAjaxRequest'>AJAX</button>
+</view>
+
+<view style='display:{{displays}}'>
+  <button id='clickEvent' data-nickname="wangxiaojing" bindtap='clickEvent'>点击弹出文字并隐藏按钮</button>
+</view>
+
+<view>
+  <button bindtap='playVideo'>播放一个视频</button>
+  <view>
+    <video style='display:{{videoDisplay}}' src='{{videoSrc}}'></video>
+  </view>
+</view>
+
+<view wx:for="{{datalist}}" wx:for-index="idx" wx:key="item">
+  <button bindtap='clickAddNumber' data-idx="{{idx}}" data-values="{{item}}">点击value+1--{{idx}}:{{item}}</button>
+</view>
